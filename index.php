@@ -19,7 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $errors['bio'] = !empty($_COOKIE['bio_error']);
     $errors['agreement'] = !empty($_COOKIE['agreement_error']);
     
-    $messages = array();
     if ($errors['name']) {
         setcookie('name_error', '', 100000);
         $messages['name'] = '<div class="error">Заполните имя. Допустимы только буквы и пробелы.</div>';
